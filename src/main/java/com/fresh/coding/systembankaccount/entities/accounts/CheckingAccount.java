@@ -7,6 +7,8 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
+
 /**
  * Represents a checking account extending from Account.
  * <p>
@@ -19,7 +21,7 @@ import lombok.experimental.SuperBuilder;
 @PrimaryKeyJoinColumn(name = "checking_id")
 @AllArgsConstructor
 @NoArgsConstructor
-public class CheckingAccount extends Account {
+public class CheckingAccount extends Account implements Serializable {
 
     @Column
     private Double overdraftLimit;

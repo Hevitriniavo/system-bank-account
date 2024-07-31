@@ -6,6 +6,8 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
+
 /**
  * Represents a business account extending from Account.
  * <p>
@@ -18,7 +20,7 @@ import lombok.experimental.SuperBuilder;
 @PrimaryKeyJoinColumn(name = "business_id")
 @AllArgsConstructor
 @NoArgsConstructor
-public class BusinessAccount extends Account {
+public class BusinessAccount extends Account implements Serializable {
 
     @Column
     private String businessName;

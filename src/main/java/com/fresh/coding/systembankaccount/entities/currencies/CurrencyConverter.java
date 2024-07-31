@@ -4,6 +4,8 @@ import com.fresh.coding.systembankaccount.entities.accounts.Account;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 
 /**
  * Represents a currency converter entity.
@@ -15,7 +17,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CurrencyConverter {
+public class CurrencyConverter implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

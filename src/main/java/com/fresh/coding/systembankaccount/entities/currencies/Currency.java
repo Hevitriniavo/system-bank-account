@@ -3,6 +3,8 @@ package com.fresh.coding.systembankaccount.entities.currencies;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * Represents a currency entity.
  * <p>
@@ -15,7 +17,7 @@ import lombok.*;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-public class Currency {
+public class Currency implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

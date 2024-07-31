@@ -6,6 +6,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -20,7 +21,7 @@ import java.time.LocalDateTime;
 @PrimaryKeyJoinColumn(name = "savings_id")
 @AllArgsConstructor
 @NoArgsConstructor
-public class SavingsAccount extends Account {
+public class SavingsAccount extends Account implements Serializable {
 
     @Column
     private Double interestRate;

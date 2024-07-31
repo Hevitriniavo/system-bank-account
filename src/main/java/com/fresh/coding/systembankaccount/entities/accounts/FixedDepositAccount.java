@@ -6,6 +6,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -20,7 +21,7 @@ import java.time.LocalDate;
 @PrimaryKeyJoinColumn(name = "fixed_deposit_id")
 @AllArgsConstructor
 @NoArgsConstructor
-public class FixedDepositAccount extends Account {
+public class FixedDepositAccount extends Account implements Serializable {
 
     @Column
     private LocalDate maturityDate;

@@ -7,6 +7,8 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
+
 /**
  * Represents a youth account extending from Account.
  * <p>
@@ -19,7 +21,7 @@ import lombok.experimental.SuperBuilder;
 @PrimaryKeyJoinColumn(name = "youth_id")
 @AllArgsConstructor
 @NoArgsConstructor
-public class YouthAccount extends Account {
+public class YouthAccount extends Account implements Serializable {
 
     @ManyToOne
     private Customer guardian;
